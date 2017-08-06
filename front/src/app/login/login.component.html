@@ -1,0 +1,22 @@
+<div class="login-container">
+  <h2>Login</h2>
+  <form [formGroup]="form" [ngClass]="{ submitted: submitted }">
+    <div class="form-row">
+      <label for="email">Email</label>
+      <input name="email" type="text" formControlName="email">
+    </div>
+    <div class="form-row">
+      <label for="password">Password</label>
+      <input name="password" type="password" formControlName="password">
+    </div>
+    <div *ngIf="invalidError" class="error-msg">
+      Check the red fields
+    </div>
+    <div *ngIf="serverError" class="error-msg">
+      Username and pasword don't match
+    </div>
+    <div>
+      <button (click)="login()">Login</button>
+    </div>
+  </form>
+</div>

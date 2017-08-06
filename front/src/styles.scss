@@ -1,0 +1,45 @@
+@charset 'utf-8';
+
+@import '../node_modules/normalize.css/normalize.css';
+
+body {
+  background-color: #fafafa;
+  color: #a0a0a0;
+  font-family: sans-serif;
+}
+
+button {
+  background: white;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 10px 15px;
+  outline: none;
+
+  &.btn-green {
+    background-color: #03d57d;
+    color: white;
+    transition: background-color .15s ease-in;
+
+    &:hover {
+      background-color: darken(#03d57d, 5%);
+    }
+  }
+}
+
+input {
+  border: 1px solid rgb(230, 230, 230);
+  border-radius: 3px;
+  padding: 10px;
+}
+
+.error-msg {
+  background-color: lighten(#f00, 40%);
+  border: 1px solid red;
+  border-radius: 3px;
+  color: red;
+  font-size: .9em;
+  font-weight: bold;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,25 @@
+@charset 'utf-8';
+
+@import '../../variables';
+
+.container {
+  margin: 0 auto;
+  width: $container;
+}
+
+.expense-header {
+  overflow: auto;
+  padding: 15px 0;
+
+  .expense-total {
+    float: left;
+    padding: 10px 0;
+    width: 75%;
+  }
+
+  .expense-button {
+    float: left;
+    text-align: right;
+    width: 25%;
+  }
+}

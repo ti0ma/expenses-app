@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+.login-container {
+  margin: 80px auto;
+  width: 400px;
+}
+
+.form-row {
+  padding-right: 20px;
+}
+
+label {
+  display: block;
+  font-size: .9em;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+input {
+  width: 100%;
+}
+
+button {
+  float: right;
+  margin-top: 15px;
+}
+
+.error-msg {
+  margin-top: 10px;
+}

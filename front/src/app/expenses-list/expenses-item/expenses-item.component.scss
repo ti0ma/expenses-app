@@ -1,0 +1,32 @@
+@charset 'utf-8';
+
+.expense-item {
+  border-bottom: 1px solid rgb(230, 230, 230);
+  font-weight: 300;
+  overflow: auto;
+  padding: 20px 10px;
+  transition: background-color .15s ease-in;
+  user-select: none;
+
+  &:hover {
+    background-color: rgba(230, 230, 230, .4);
+    cursor: pointer;
+  }
+}
+
+.expense-description {
+  float: left;
+  width: 50%;
+  word-break: break-word;
+}
+
+.expense-date {
+  float: left;
+  width: 30%;
+}
+
+.expense-amount {
+  float: left;
+  width: 20%;
+  text-align: right;
+}

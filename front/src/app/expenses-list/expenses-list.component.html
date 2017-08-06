@@ -1,0 +1,16 @@
+<div class="container" *ngIf="data">
+  <div class="expense-header">
+    <div class="expense-total">
+      <span>Total expenses: {{ total | currency:'EUR':true:'1.2-2'}}</span>
+    </div>
+    <div class="expense-button">
+      <button class="btn-green" (click)="show()">Add new</button>
+    </div>
+  </div>
+  <app-expenses-item
+    *ngFor="let item of data"
+    [item]="item"
+    (click)="show(item)">
+  </app-expenses-item>
+  <app-expenses-form [event]="formEvent" (onSave)="update($event)"></app-expenses-form>
+</div>

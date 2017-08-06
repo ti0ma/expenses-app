@@ -1,0 +1,25 @@
+<div class="expense-form-wrapper" [ngClass]="{show: show}">
+  <div class="expense-form-overlay" (click)="show = false"></div>
+  <div class="expense-form-container">
+    <span class="back-button" (click)="show = false">&#8592;</span>
+    <form [formGroup]="form" [ngClass]="{ submitted: submitted }">
+      <div class="form-row">
+        <label for="">Description</label>
+        <input name="description" type="text" formControlName="description" maxlength="200">
+      </div>
+      <div class="form-row">
+        <label for="">Amount €</label>
+        <input name="amount" type="number" formControlName="amount">
+      </div>
+      <div *ngIf="invalidError" class="error-msg">
+        Check the red fields
+      </div>
+      <div *ngIf="serverError" class="error-msg">
+        Server error. Some of the input might be wrong.
+      </div>
+      <div class="form-row">
+        <button (click)="save()">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
