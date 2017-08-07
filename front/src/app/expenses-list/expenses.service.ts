@@ -14,22 +14,13 @@ export class ExpensesService {
     private authService: AuthService
   ) { }
 
-  getHeaders() {
-    const headers = new Headers();
-    headers.append('Authorize', `Basic ${btoa('client:secret')}`);
-    return headers;
-  }
-
   getAccessToken() {
     return `?access_token=${this.authService.getAccessToken()}`;
   }
 
   getAll() {
-    const headers = this.getHeaders();
-    return this.http.get(`${this.BASE_URL}${this.getAccessToken()}`, {
-      headers
-    })
-      .map((res) => res.json());
+    return this.http.get(`${this.BASE_URL}${this.getAccessToken()}`)
+    .map((res) => res.json());
   }
 
   create(description, amount) {

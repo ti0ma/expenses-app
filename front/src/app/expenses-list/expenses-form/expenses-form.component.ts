@@ -32,6 +32,7 @@ export class ExpensesFormComponent implements OnInit {
   }
 
   createForm(id = null, description = '', amount = '') {
+    this.submitted = false;
     this.id = id;
     this.form = this.builder.group({
       description: [description, Validators.required],
