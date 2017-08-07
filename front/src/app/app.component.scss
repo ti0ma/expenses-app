@@ -4,8 +4,8 @@
 
 header {
   background-color: white;
-  border-bottom: 1px solid rgb(230, 230, 230);
-  box-shadow: 0 7px 20px 0 rgba(230, 230, 230, .5);
+  border-bottom: 1px solid $light-gray;
+  box-shadow: 0 7px 20px 0 $transparent-gray;
   margin-bottom: 40px;
   width: 100%;
 
@@ -25,7 +25,7 @@ header {
       padding: 24px 12px;
 
       &:hover {
-        background-color: rgba(230, 230, 230, .5);
+        background-color: $transparent-gray;
         cursor: pointer;
       }
     }
